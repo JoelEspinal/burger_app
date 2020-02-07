@@ -1,6 +1,5 @@
+import 'package:burger_app/ui/ingredients/ingredients_widget.dart';
 import 'package:flutter/material.dart';
-
-double _height;
 
 class Ingredientsheet extends StatefulWidget {
   @override
@@ -43,32 +42,13 @@ class _IngredientsheetState extends State<Ingredientsheet> {
                   builder: (BuildContext context) {
                     return FractionallySizedBox(
                       heightFactor: 0.88,
-                      child: _IngredientWidget(),
+                      child: IngredientWidget(),
                     );
                   },
                 );
               },
             ),
           ),
-        ],
-      ),
-    );
-  }
-}
-
-class _IngredientWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: _height,
-      child: Column(
-        children: <Widget>[
-          Row(
-            children: <Widget>[
-              Text("Vegetable"),
-            ],
-          ),
-          Text("Lista de ingredientes"),
         ],
       ),
     );
