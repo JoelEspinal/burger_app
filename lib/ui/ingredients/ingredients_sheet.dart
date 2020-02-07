@@ -27,7 +27,7 @@ class _IngredientsheetState extends State<Ingredientsheet> {
           Text(
             "Ingredients",
             style: TextStyle(
-              fontSize: 16.0,
+              fontSize: 18.0,
               fontWeight: FontWeight.bold,
             ),
           ),
