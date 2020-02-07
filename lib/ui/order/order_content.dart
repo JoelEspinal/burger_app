@@ -7,8 +7,8 @@ class OrderBody extends StatelessWidget {
       constraints: BoxConstraints.expand(),
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/burger_background.jpg"),
           fit: BoxFit.cover,
+          image: AssetImage("assets/images/burger_background.jpg"),
         ),
       ),
       child: Container(
