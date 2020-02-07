@@ -41,7 +41,7 @@ class _IngredientsheetState extends State<Ingredientsheet> {
                   isScrollControlled: true,
                   builder: (BuildContext context) {
                     return FractionallySizedBox(
-                      heightFactor: 0.88,
+                      heightFactor: 0.90,
                       child: IngredientWidget(),
                     );
                   },
