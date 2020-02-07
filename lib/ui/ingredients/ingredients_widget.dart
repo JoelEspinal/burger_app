@@ -10,7 +10,7 @@ class IngredientWidget extends StatelessWidget {
       padding: EdgeInsets.only(
         top: 18.0,
         left: 18.0,
-        right: 18.0,
+        right: 20.0,
       ),
       child: Container(
         height: _height,
@@ -36,7 +36,17 @@ class IngredientWidget extends StatelessWidget {
                 ),
               ],
             ),
-            Text("Lista de ingredientes"),
+            Container(
+              width: double.infinity,
+              height: (_height * 0.20),
+              child: Row(
+                children: <Widget>[
+                  Text("Vegetable 1"),
+                  Text("Vegetable 2"),
+                  Text("Vegetable 3")
+                ],
+              ),
+            ),
           ],
         ),
       ),
