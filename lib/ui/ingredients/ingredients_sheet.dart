@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 double _height;
-Size _screenSize;
 
 class Ingredientsheet extends StatefulWidget {
   @override
@@ -13,13 +12,14 @@ class _IngredientsheetState extends State<Ingredientsheet> {
   Widget build(BuildContext context) {
     Size _screenSize = MediaQuery.of(context).size;
     double _height = _screenSize.height;
-    double _sheetHeight = _height * 0.20;
+    double _sheetHeight = _height * 0.08;
 
     return Container(
       color: Colors.white10,
       width: double.infinity,
       height: _sheetHeight,
       padding: EdgeInsets.only(
+        top: 18.0,
         left: 18.0,
         right: 18.0,
       ),
@@ -28,7 +28,7 @@ class _IngredientsheetState extends State<Ingredientsheet> {
           Text(
             "Ingredients",
             style: TextStyle(
-              fontSize: 10.0,
+              fontSize: 16.0,
               fontWeight: FontWeight.bold,
             ),
           ),
