@@ -5,7 +5,7 @@ class OrderBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 25.0),
-      height: 50.0,
+      height: 52.0,
       color: Colors.transparent,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -40,7 +40,6 @@ class OrderBody extends StatelessWidget {
           OrderBar(),
           Container(
             padding: EdgeInsets.only(
-              top: 52.0,
               left: 24,
             ),
             child: Container(
