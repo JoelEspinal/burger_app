@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 double _height;
+Size _screenSize;
 
 class Ingredientsheet extends StatefulWidget {
   @override
@@ -10,7 +11,8 @@ class Ingredientsheet extends StatefulWidget {
 class _IngredientsheetState extends State<Ingredientsheet> {
   @override
   Widget build(BuildContext context) {
-    double _height = MediaQuery.of(context).size.height;
+    Size _screenSize = MediaQuery.of(context).size;
+    double _height = _screenSize.height;
     double _sheetHeight = _height * 0.20;
 
     return Container(
@@ -21,19 +23,21 @@ class _IngredientsheetState extends State<Ingredientsheet> {
         left: 18.0,
         right: 18.0,
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+      child: Stack(
         children: <Widget>[
           Text(
             "Ingredients",
-            textAlign: TextAlign.start,
             style: TextStyle(
               fontSize: 10.0,
+              fontWeight: FontWeight.bold,
             ),
           ),
-          FlatButton(
-            onPressed: () {
-              showModalBottomSheet<void>(
+          Container(
+            width: double.infinity,
+            child: FlatButton(
+              child: Icon(Icons.expand_less),
+              onPressed: () {
+                showModalBottomSheet<void>(
                   context: context,
                   isScrollControlled: true,
                   builder: (BuildContext context) {
@@ -41,9 +45,10 @@ class _IngredientsheetState extends State<Ingredientsheet> {
                       heightFactor: 0.88,
                       child: _IngredientWidget(),
                     );
-                  });
-            },
-            child: Icon(Icons.expand_less),
+                  },
+                );
+              },
+            ),
           ),
         ],
       ),
