@@ -1,55 +1,54 @@
-import 'package:burger_app/ui/ingredients/ingredients_widget.dart';
 import 'package:flutter/material.dart';
 
-class Ingredientsheet extends StatefulWidget {
-  @override
-  _IngredientsheetState createState() => _IngredientsheetState();
-}
-
-class _IngredientsheetState extends State<Ingredientsheet> {
+class IngredientSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size _screenSize = MediaQuery.of(context).size;
     double _height = _screenSize.height;
-    double _sheetHeight = _height * 0.08;
 
-    return Container(
-      color: Colors.white10,
-      width: double.infinity,
-      height: _sheetHeight,
+    return Padding(
       padding: EdgeInsets.only(
         top: 18.0,
         left: 18.0,
-        right: 18.0,
+        right: 20.0,
       ),
-      child: Stack(
-        children: <Widget>[
-          Text(
-            "Ingredients",
-            style: TextStyle(
-              fontSize: 18.0,
-              fontWeight: FontWeight.bold,
+      child: Container(
+        height: _height,
+        width: double.infinity,
+        child: Column(
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  "Ingredients",
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  "\$0.05",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
-          ),
-          Container(
-            width: double.infinity,
-            child: FlatButton(
-              child: Icon(Icons.expand_less),
-              onPressed: () {
-                showModalBottomSheet<void>(
-                  context: context,
-                  isScrollControlled: true,
-                  builder: (BuildContext context) {
-                    return FractionallySizedBox(
-                      heightFactor: 0.91,
-                      child: IngredientWidget(),
-                    );
-                  },
-                );
-              },
+            Container(
+              width: double.infinity,
+              height: (_height * 0.20),
+              child: Row(
+                children: <Widget>[
+                  Text("Vegetable 1"),
+                  Text("Vegetable 2"),
+                  Text("Vegetable 3")
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

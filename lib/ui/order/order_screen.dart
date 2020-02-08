@@ -1,4 +1,4 @@
-import 'package:burger_app/ui/ingredients/ingredients_sheet.dart';
+import 'package:burger_app/ui/ingredients/ingredients_bottom_menu.dart';
 import 'package:burger_app/ui/order/order_content.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +8,7 @@ class OrderScreen extends StatelessWidget {
     return Scaffold(
       extendBody: false,
       body: OrderBody(),
-      bottomSheet: Ingredientsheet(),
+      bottomSheet: IngredientsheetBottomMenu(),
       bottomNavigationBar: Container(
         color: Colors.white,
         child: Padding(
