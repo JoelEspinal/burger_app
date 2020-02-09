@@ -39,10 +39,13 @@ class IngredientSheet extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              height: (_height * 0.15),
+              height: (_height * 0.20),
               child: Row(
                 children: <Widget>[
-                  Text("Vegetable 1"),
+                  Icon(
+                    Icons.local_dining,
+                    color: Colors.black,
+                  ),
                   Text("Vegetable 2"),
                   Text("Vegetable 3")
                 ],

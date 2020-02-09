@@ -34,7 +34,7 @@ class IngredientWidget extends StatelessWidget {
               ),
               Container(
                 width: double.infinity,
-                height: _height * 0.5,
+                height: _height * 0.45,
                 child: TabBarView(
                   children: [
                     Icon(Icons.directions_car),
