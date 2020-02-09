@@ -1,3 +1,4 @@
+import 'package:burger_app/ui/ingredients/ingredients_widget.dart';
 import 'package:flutter/material.dart';
 
 class IngredientSheet extends StatelessWidget {
@@ -13,8 +14,8 @@ class IngredientSheet extends StatelessWidget {
         right: 20.0,
       ),
       child: Container(
-        height: _height,
         width: double.infinity,
+        height: _height * 0.10,
         child: Column(
           children: <Widget>[
             Row(
@@ -38,7 +39,7 @@ class IngredientSheet extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              height: (_height * 0.20),
+              height: (_height * 0.15),
               child: Row(
                 children: <Widget>[
                   Text("Vegetable 1"),
@@ -47,6 +48,7 @@ class IngredientSheet extends StatelessWidget {
                 ],
               ),
             ),
+            IngredientWidget(),
           ],
         ),
       ),
