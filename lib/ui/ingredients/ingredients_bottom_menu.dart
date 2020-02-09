@@ -12,7 +12,7 @@ class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
   Widget build(BuildContext context) {
     Size _screenSize = MediaQuery.of(context).size;
     double _height = _screenSize.height;
-    double _sheetHeight = _height * 0.08;
+    double _sheetHeight = _height * 0.12;
 
     return Container(
       color: Colors.white10,
