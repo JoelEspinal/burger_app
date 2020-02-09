@@ -14,22 +14,17 @@ class IngredientWidget extends StatelessWidget {
           child: Column(
             children: <Widget>[
               TabBar(
+                labelColor: Colors.black,
                 tabs: [
                   Tab(
-                      icon: Icon(
-                    Icons.directions_car,
-                    color: Colors.black,
-                  )),
+                    text: "Vegetables",
+                  ),
                   Tab(
-                      icon: Icon(
-                    Icons.directions_transit,
-                    color: Colors.black,
-                  )),
+                    text: "Meet",
+                  ),
                   Tab(
-                      icon: Icon(
-                    Icons.directions_bike,
-                    color: Colors.black,
-                  )),
+                    text: "Topping",
+                  )
                 ],
               ),
               Container(
