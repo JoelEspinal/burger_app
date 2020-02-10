@@ -23,35 +23,40 @@ class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
         left: 18.0,
         right: 18.0,
       ),
-      child: Stack(
-        children: <Widget>[
-          Text(
-            "Ingredients",
-            style: TextStyle(
-              fontSize: 18.0,
-              fontWeight: FontWeight.bold,
+      child: GestureDetector(
+        onVerticalDragEnd: (DragEndDetails details) => _showModalSheet(),
+        child: Stack(
+          children: <Widget>[
+            Text(
+              "Ingredients",
+              style: TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          Container(
-            width: double.infinity,
-            child: FlatButton(
-              child: Icon(Icons.expand_less),
-              onPressed: () {
-                showModalBottomSheet<void>(
-                  context: context,
-                  isScrollControlled: true,
-                  builder: (BuildContext context) {
-                    return FractionallySizedBox(
-                      heightFactor: 0.91,
-                      child: IngredientSheet(),
-                    );
-                  },
-                );
-              },
+            Container(
+              width: double.infinity,
+              child: FlatButton(
+                child: Icon(Icons.expand_less),
+                onPressed: () => _showModalSheet(),
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
+    );
+  }
+
+  _showModalSheet() {
+    showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      builder: (BuildContext context) {
+        return FractionallySizedBox(
+          heightFactor: 0.91,
+          child: IngredientSheet(),
+        );
+      },
     );
   }
 }
