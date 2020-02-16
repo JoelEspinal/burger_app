@@ -1,3 +1,4 @@
+import 'package:burger_app/ui/common/ingredient_tab_content.dart';
 import 'package:flutter/material.dart';
 
 class IngredientWidget extends StatelessWidget {
@@ -32,7 +33,7 @@ class IngredientWidget extends StatelessWidget {
                 height: _height * 0.45,
                 child: TabBarView(
                   children: [
-                    Icon(Icons.directions_car),
+                    IngredientTabContent(),
                     Icon(Icons.directions_transit),
                     Icon(Icons.directions_bike),
                   ],
