@@ -15,6 +15,8 @@ class Ingredient extends StatelessWidget {
                 size: 28,
               ),
               Column(
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
                     "Cabbage",
@@ -23,12 +25,10 @@ class Ingredient extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  IntrinsicWidth(
-                    child: Text(
-                      "\$0.3",
-                      textAlign: TextAlign.start,
-                    ),
-                  )
+                  Text(
+                    "\$0.3",
+                    textAlign: TextAlign.start,
+                  ),
                 ],
               ),
             ],
