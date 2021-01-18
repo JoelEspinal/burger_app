@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'src/app.dart';
+import 'pages.dart/detail_page.dart';
+import 'pages.dart/menu_page.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'BURGER APP',
       theme: ThemeData(
         bottomSheetTheme: BottomSheetThemeData(
           backgroundColor: Colors.white,
@@ -20,7 +18,10 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: App(),
+      routes: {
+        '/': (context) => MenuPage(),
+        '/details': (context) => DetailPage()
+      },
     );
   }
 }
