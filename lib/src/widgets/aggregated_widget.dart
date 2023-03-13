@@ -106,7 +106,7 @@ class AggregatedWidget extends StatelessWidget {
                       children: [
                         Column(
                           children: [
-                            ..._ingredients[type].map(
+                            ..._ingredients[type]!.map(
                               (item) => IngredientItemWidget(
                                   name: item['name'],
                                   price: item['price'],

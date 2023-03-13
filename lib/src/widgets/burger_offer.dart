@@ -37,7 +37,7 @@ class BurgerOffer extends StatelessWidget {
                       padding: EdgeInsets.only(bottom: 12.0),
                       child: Text(
                         'Cheese Burger',
-                        style: Theme.of(context).textTheme.bodyText1.copyWith(
+                        style: Theme.of(context).textTheme.headlineLarge!.copyWith(
                             fontWeight: FontWeight.bold, color: Colors.white),
                       ),
                     ),
@@ -47,7 +47,7 @@ class BurgerOffer extends StatelessWidget {
                                 MaterialStateProperty.all<Color>(Colors.green)),
                         child: Text(
                           '\$4.15',
-                          style: Theme.of(context).textTheme.bodyText1.copyWith(
+                          style: Theme.of(context).textTheme.headlineLarge!.copyWith(
                               fontWeight: FontWeight.bold, color: Colors.white),
                         ),
                         onPressed: () {}),

@@ -9,7 +9,6 @@ class IngredientsheetBottomMenu extends StatefulWidget {
 }
 
 class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
-  PersistentBottomSheetController _controller;
   GlobalKey<ScaffoldState> _key = GlobalKey();
 
   @override
@@ -38,7 +37,7 @@ class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
                   ),
                 ),
                 Spacer(),
-                FlatButton(
+                ElevatedButton(
                   child: Icon(Icons.expand_less),
                   onPressed: () => _showModalSheet(),
                 ),
@@ -49,7 +48,7 @@ class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
             Container(
               width: double.infinity,
               height: 44.0,
-              child: RaisedButton(
+              child: MaterialButton(
                   color: Colors.yellow,
                   padding: EdgeInsets.symmetric(horizontal: 18.0),
                   child: const Text(

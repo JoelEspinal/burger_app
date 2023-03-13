@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 import '../widgets/ingredients_bottom_menu.dart';
@@ -6,7 +7,7 @@ class DetailPage extends StatelessWidget {
   final backgroundImg =
       'https://img.freepik.com/free-photo/delicious-grilled-burgers_62847-16.jpg?size=626&ext=jpg';
 
-  Size size;
+  late Size size;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class DetailPage extends StatelessWidget {
 
     final _appBar = AppBar(
       backgroundColor: Colors.transparent,
-      leading: FlatButton(
+      leading: ElevatedButton(
         onPressed: () {
           Navigator.of(context).pop();
         },
@@ -27,7 +28,7 @@ class DetailPage extends StatelessWidget {
       actions: [Icon(Icons.favorite_border_outlined)],
     );
 
-    var _appBarHeight = _appBar.preferredSize.height;
+    var _appBarHeight  = _appBar.preferredSize.height;
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -53,7 +54,7 @@ class DetailPage extends StatelessWidget {
                   children: [
                     Text(
                       'Cheese\nBurget',
-                      style: Theme.of(context).textTheme.headline3.copyWith(
+                      style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                           fontWeight: FontWeight.bold, color: Colors.white),
                     ),
                   ],
@@ -64,7 +65,7 @@ class DetailPage extends StatelessWidget {
                   children: [
                     Text(
                       '325g',
-                      style: Theme.of(context).textTheme.headline6.copyWith(
+                      style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                           fontWeight: FontWeight.bold, color: Colors.white),
                     ),
                     Container(
@@ -74,7 +75,7 @@ class DetailPage extends StatelessWidget {
                             '\$2.',
                             style: Theme.of(context)
                                 .textTheme
-                                .headline2
+                                .headlineLarge!
                                 .copyWith(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.yellow),
@@ -85,7 +86,7 @@ class DetailPage extends StatelessWidget {
                                 '15',
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline4
+                                    .headlineSmall!
                                     .copyWith(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.yellow),

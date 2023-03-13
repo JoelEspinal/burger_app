@@ -54,7 +54,7 @@ class IngredientSheet extends StatelessWidget {
                     ),
                   ),
                   Spacer(),
-                  FlatButton(
+                  ElevatedButton(
                     child: Icon(Icons.expand_more),
                     onPressed: () => {Navigator.of(context).pop()},
                   ),
@@ -72,9 +72,9 @@ class IngredientSheet extends StatelessWidget {
               children: [
                 ..._chossenIngredients
                     .map((ingredient) => IngredientWidget(
-                          name: ingredient['name'],
-                          url: ingredient['url'],
-                          quantity: ingredient['quantity'],
+                          name: ingredient['name'] as String,
+                          url: ingredient['url'] as String,
+                          quantity: ingredient['quantity'] as int,
                         ))
                     .toList(),
               ],
@@ -88,7 +88,7 @@ class IngredientSheet extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 18.0),
             width: double.infinity,
             height: _height * 0.06,
-            child: RaisedButton(
+            child: MaterialButton(
                 color: Colors.yellow,
                 padding: EdgeInsets.symmetric(horizontal: 18.0),
                 child: const Text(
