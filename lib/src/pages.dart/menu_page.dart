@@ -19,7 +19,7 @@ class MenuPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'TASTYBURGER menu page',
+          'TASTYBURGER',
           style: Theme.of(context)
               .textTheme
               .headlineSmall!
