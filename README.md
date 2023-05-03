@@ -1,4 +1,4 @@
-# burger_app
+# tasty_burger_app
 
 Burgers App
 

@@ -7,7 +7,7 @@ class DetailPage extends StatelessWidget {
   final backgroundImg =
       'https://img.freepik.com/free-photo/delicious-grilled-burgers_62847-16.jpg?size=626&ext=jpg';
 
-  Size size;
+  late Size size;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class DetailPage extends StatelessWidget {
       actions: [Icon(Icons.favorite_border_outlined)],
     );
 
-    var _appBarHeight = _appBar.preferredSize.height;
+    var _appBarHeight  = _appBar.preferredSize.height;
 
     return Scaffold(
       extendBodyBehindAppBar: true,

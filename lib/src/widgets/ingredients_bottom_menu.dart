@@ -9,7 +9,6 @@ class IngredientsheetBottomMenu extends StatefulWidget {
 }
 
 class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
-  PersistentBottomSheetController _controller;
   GlobalKey<ScaffoldState> _key = GlobalKey();
 
   @override

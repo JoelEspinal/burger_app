@@ -9,7 +9,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'BURGER APP',
       theme: ThemeData(
-        bottomSheetTheme: BottomSheetThemeData(
+        bottomSheetTheme: const BottomSheetThemeData(
           backgroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(

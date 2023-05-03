@@ -5,7 +5,7 @@ class IngredientWidget extends StatelessWidget {
   final String url;
   final int quantity;
 
-  IngredientWidget({this.name, this.url, this.quantity});
+  IngredientWidget({required this.name, required this.url, required this.quantity});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class IngredientWidget extends StatelessWidget {
                   radius: 12.0,
                   child: Text(
                     '$quantity',
-                    style: Theme.of(context).textTheme.bodyText1.copyWith(
+                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                           color: Colors.grey,
                         ),
                   ),
