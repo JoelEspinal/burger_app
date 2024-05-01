@@ -35,7 +35,7 @@ class DetailPage extends StatelessWidget {
       appBar: _appBar,
       body: Stack(
         children: [
-          Container(
+          SizedBox(
             width: _size.width,
             height: _size.height,
             child: Image.network(
@@ -74,33 +74,31 @@ class DetailPage extends StatelessWidget {
                           .copyWith(
                               fontWeight: FontWeight.bold, color: Colors.white),
                     ),
-                    Container(
-                      child: Row(
-                        children: [
-                          Text(
-                            '\$2.',
-                            style: Theme.of(context)
-                                .textTheme
-                                .headlineLarge!
-                                .copyWith(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.yellow),
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                '15',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headlineSmall!
-                                    .copyWith(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.yellow),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
+                    Row(
+                      children: [
+                        Text(
+                          '\$2.',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineLarge!
+                              .copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.yellow),
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              '15',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headlineSmall!
+                                  .copyWith(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.yellow),
+                            ),
+                          ],
+                        )
+                      ],
                     )
                   ],
                 )

@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'pages.dart/detail_page.dart';
 import 'pages.dart/menu_page.dart';
 
-class App extends StatelessWidget {
+class BurgerApp extends StatelessWidget {
+  const BurgerApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

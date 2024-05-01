@@ -85,7 +85,7 @@ class MenuPage extends StatelessWidget {
                     color: Colors.black),
               ),
             ),
-            Container(
+            SizedBox(
               width: _size.width,
               height: _size.height / 4,
               child: ListView(

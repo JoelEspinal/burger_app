@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'src/app.dart';
+import 'src/burger_app.dart';
 
-void main() => runApp(const BurgerApp());
+void main() => runApp(const Main());
 
-class BurgerApp extends StatelessWidget {
-  const BurgerApp({super.key});
+class Main extends StatelessWidget {
+  const Main({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class BurgerApp extends StatelessWidget {
           ),
         ),
       ),
-      home: App(),
+      home: const BurgerApp(),
     );
   }
 }

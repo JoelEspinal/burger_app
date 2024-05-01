@@ -17,7 +17,7 @@ class BurgerOffer extends StatelessWidget {
       onTap: () => Navigator.of(context).pushNamed('/details'),
       child: Stack(
         children: [
-          Container(
+          SizedBox(
             height: height,
             width: width / 3,
             child: ClipRRect(

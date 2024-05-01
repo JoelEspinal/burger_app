@@ -93,7 +93,7 @@ class BurgerCard extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: Container(
+                  child: SizedBox(
                     height: height,
                     child: Padding(
                       padding: const EdgeInsets.all(24.0),

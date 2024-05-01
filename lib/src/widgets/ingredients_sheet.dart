@@ -34,14 +34,14 @@ class IngredientSheet extends StatelessWidget {
     Size _screenSize = MediaQuery.of(context).size;
     double _height = _screenSize.height;
     double _width = _screenSize.width;
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: _height * 0.10,
       child: Column(
         children: <Widget>[
           Padding(
             padding: EdgeInsets.only(left: 18.0),
-            child: Container(
+            child: SizedBox(
               width: _width,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

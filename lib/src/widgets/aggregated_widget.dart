@@ -68,7 +68,7 @@ class AggregatedWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: width,
       height: height * 0.62,
       child: DefaultTabController(
@@ -76,7 +76,7 @@ class AggregatedWidget extends StatelessWidget {
         child: ListView(
           scrollDirection: Axis.vertical,
           children: [
-            Container(
+            SizedBox(
               width: width,
               height: 60.0,
               child: TabBar(
@@ -95,7 +95,7 @@ class AggregatedWidget extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
+            SizedBox(
               width: width,
               height: (height * 0.53),
               child: TabBarView(
