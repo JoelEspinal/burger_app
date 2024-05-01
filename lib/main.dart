@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 
 import 'src/app.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const BurgerApp());
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class BurgerApp extends StatelessWidget {
+  const BurgerApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Burger App',
       theme: ThemeData(
-        bottomSheetTheme: BottomSheetThemeData(
+        bottomSheetTheme: const BottomSheetThemeData(
           backgroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(
