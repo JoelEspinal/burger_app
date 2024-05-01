@@ -28,7 +28,7 @@ class DetailPage extends StatelessWidget {
       actions: [Icon(Icons.favorite_border_outlined)],
     );
 
-    var _appBarHeight  = _appBar.preferredSize.height;
+    var _appBarHeight = _appBar.preferredSize.height;
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -54,8 +54,11 @@ class DetailPage extends StatelessWidget {
                   children: [
                     Text(
                       'Cheese\nBurget',
-                      style: Theme.of(context).textTheme.headlineMedium.copyWith(
-                          fontWeight: FontWeight.bold, color: Colors.white),
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineMedium!
+                          .copyWith(
+                              fontWeight: FontWeight.bold, color: Colors.white),
                     ),
                   ],
                 ),
@@ -65,8 +68,11 @@ class DetailPage extends StatelessWidget {
                   children: [
                     Text(
                       '325g',
-                      style: Theme.of(context).textTheme.headlineSmall.copyWith(
-                          fontWeight: FontWeight.bold, color: Colors.white),
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineSmall!
+                          .copyWith(
+                              fontWeight: FontWeight.bold, color: Colors.white),
                     ),
                     Container(
                       child: Row(
@@ -75,7 +81,7 @@ class DetailPage extends StatelessWidget {
                             '\$2.',
                             style: Theme.of(context)
                                 .textTheme
-                                .headlineLarge
+                                .headlineLarge!
                                 .copyWith(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.yellow),
@@ -86,7 +92,7 @@ class DetailPage extends StatelessWidget {
                                 '15',
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headlineSmall
+                                    .headlineSmall!
                                     .copyWith(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.yellow),
