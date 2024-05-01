@@ -70,13 +70,11 @@ class IngredientSheet extends StatelessWidget {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                ..._chossenIngredients
-                    .map((ingredient) => IngredientWidget(
-                          name: ingredient['name'] as String,
-                          url: ingredient['url'] as String,
-                          quantity: ingredient['quantity'] as int,
-                        ))
-                    .toList(),
+                ..._chossenIngredients.map((ingredient) => IngredientWidget(
+                      name: ingredient['name'] as String,
+                      url: ingredient['url'] as String,
+                      quantity: ingredient['quantity'] as int,
+                    )),
               ],
             ),
           ),
@@ -85,12 +83,12 @@ class IngredientSheet extends StatelessWidget {
             height: _height,
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 18.0),
+            padding: const EdgeInsets.symmetric(horizontal: 18.0),
             width: double.infinity,
             height: _height * 0.06,
             child: MaterialButton(
                 color: Colors.yellow,
-                padding: EdgeInsets.symmetric(horizontal: 18.0),
+                padding: const EdgeInsets.symmetric(horizontal: 18.0),
                 child: const Text(
                   'Add to Cart',
                   style: TextStyle(
