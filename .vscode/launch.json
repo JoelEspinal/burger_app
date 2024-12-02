@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "tasty_burger_app",
+            "name": "burger_app_secure",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "tasty_burger_app (profile mode)",
+            "name": "burger_app_secure (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "tasty_burger_app (release mode)",
+            "name": "burger_app_secure (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

@@ -45,7 +45,7 @@ class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
               ],
             ),
             Spacer(flex: 2),
-            Container(
+            SizedBox(
               width: double.infinity,
               height: 44.0,
               child: MaterialButton(
