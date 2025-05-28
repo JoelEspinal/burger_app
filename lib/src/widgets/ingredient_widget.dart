@@ -5,7 +5,8 @@ class IngredientWidget extends StatelessWidget {
   final String url;
   final int quantity;
 
-  IngredientWidget({required this.name, required this.url, required this.quantity});
+  IngredientWidget(
+      {required this.name, required this.url, required this.quantity});
 
   @override
   Widget build(BuildContext context) {

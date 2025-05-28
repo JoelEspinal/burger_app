@@ -24,7 +24,7 @@ class BurgerOffer extends StatelessWidget {
               borderRadius: const BorderRadius.all(
                 Radius.circular(10),
               ),
-              child: Image.network(
+              child: Image.asset(
                 url,
                 fit: BoxFit.cover,
               ),
@@ -46,7 +46,15 @@ class BurgerOffer extends StatelessWidget {
                             .headlineMedium!
                             .copyWith(
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white),
+                                color: Colors.yellowAccent,
+                          shadows: [
+                            Shadow(
+                              blurRadius: 10.0,
+                              color: Colors.black,
+                              offset: Offset(5.0, 5.0),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     ElevatedButton(
@@ -60,7 +68,8 @@ class BurgerOffer extends StatelessWidget {
                             .headlineSmall!
                             .copyWith(
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white),
+                                color: Colors.white,
+                        ),
                       ),
                       onPressed: () {},
                     ),

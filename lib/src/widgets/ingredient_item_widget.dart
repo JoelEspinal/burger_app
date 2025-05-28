@@ -32,7 +32,7 @@ class IngredientItemWidget extends StatelessWidget {
                     child: CircleAvatar(
                       backgroundColor: Colors.white,
                       radius: 34.0,
-                      child: Image.network(
+                      child: Image.asset(
                         url,
                         width: 44.0,
                         height: 44.0,

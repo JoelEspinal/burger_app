@@ -5,7 +5,7 @@ import '../widgets/ingredients_bottom_menu.dart';
 
 class DetailPage extends StatelessWidget {
   final backgroundImg =
-      'https://img.freepik.com/free-photo/delicious-grilled-burgers_62847-16.jpg?size=626&ext=jpg';
+      'https://www.foodandwine.com/thmb/iUUTcrSR2O0jUGzuO5XLS6VQkS8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Grilled-Burgers-with-Pimento-Cheese-FT-RECIPE0723-7bba8a4daaa646b29e3d111b32ae0e40.jpg';
 
   late Size size;
 
@@ -14,17 +14,17 @@ class DetailPage extends StatelessWidget {
     var _size = MediaQuery.of(context).size;
 
     final _appBar = AppBar(
-      backgroundColor: Colors.transparent,
-      leading: ElevatedButton(
-        onPressed: () {
-          Navigator.of(context).pop();
-        },
-        child: Icon(
-          Icons.chevron_left,
-          color: Colors.white,
-          size: 32.0,
-        ),
-      ),
+      backgroundColor: Colors.yellowAccent,
+      // leading: ElevatedButton(
+      //   onPressed: () {
+      //     Navigator.of(context).pop();
+      //   },
+      //   child: Icon(
+      //     Icons.chevron_left,
+      //     color: Colors.red,
+      //     size: 32.0,
+      //   ),
+      // ),
       actions: [Icon(Icons.favorite_border_outlined)],
     );
 
@@ -66,14 +66,19 @@ class DetailPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Text(
-                      '325g',
-                      style: Theme.of(context)
-                          .textTheme
-                          .headlineSmall
-                          ?.copyWith(
-                              fontWeight: FontWeight.bold, color: Colors.white),
+                    CircleAvatar(
+                      backgroundColor: Colors.yellowAccent,
+                      radius: 36.0,
+                      child:  Text(
+                        '325g',
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineSmall
+                            ?.copyWith(
+                            fontWeight: FontWeight.bold, color: Colors.red),
+                      ),
                     ),
+
                     SizedBox(
                       child: Row(
                         children: [
@@ -84,7 +89,7 @@ class DetailPage extends StatelessWidget {
                                 .headlineLarge
                                 ?.copyWith(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.yellow),
+                                    color: Colors.black),
                           ),
                           Column(
                             children: [
@@ -95,7 +100,7 @@ class DetailPage extends StatelessWidget {
                                     .headlineSmall
                                     ?.copyWith(
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.yellow),
+                                        color: Colors.black),
                               ),
                             ],
                           )

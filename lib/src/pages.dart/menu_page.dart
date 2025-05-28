@@ -6,10 +6,10 @@ import '../widgets/burger_offer.dart';
 class MenuPage extends StatelessWidget {
   final flavors = ['Cheese', 'Chicken', 'Fish', 'Vegetarian', 'Impossible'];
   final offers = [
-    'https://img.freepik.com/free-photo/delicious-grilled-burgers_62847-16.jpg?size=626&ext=jpg',
-    'https://img.freepik.com/free-photo/delicious-grilled-burgers_62847-16.jpg?size=626&ext=jpg',
-    'https://img.freepik.com/free-photo/delicious-grilled-burgers_62847-16.jpg?size=626&ext=jpg',
-    'https://img.freepik.com/free-photo/delicious-grilled-burgers_62847-16.jpg?size=626&ext=jpg',
+    'assets/images/grilled-burgers.webp',
+    'assets/images/grilled-burgers.webp',
+    'assets/images/grilled-burgers.webp',
+    'assets/images/grilled-burgers.webp'
   ];
 
   late Size _size;
@@ -72,7 +72,7 @@ class MenuPage extends StatelessWidget {
               padding: EdgeInsets.all(8.0),
               child: BurgerCard(
                 width: _size.width,
-                height: _size.height / 4.0,
+                height: _size.height,
               ),
             ),
             Padding(
@@ -109,7 +109,7 @@ class MenuPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: BurgerCard(
                 width: _size.width,
-                height: _size.height / 4.0,
+                height: _size.height,
               ),
             ),
           ],

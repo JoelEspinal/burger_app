@@ -10,56 +10,46 @@ class AggregatedWidget extends StatelessWidget {
       {
         'name': 'Cabbage',
         'price': 0.3,
-        'url': 'https://pngimg.com/uploads/cabbage/cabbage_PNG8801.png',
+        'url': 'assets/images/cabbage.png',
       },
       {
         'name': 'Tomato',
         'price': 0.08,
-        'url':
-            'https://media.istockphoto.com/photos/tomato-isolated-on-white-background-picture-id466175630?k=6&m=466175630&s=612x612&w=0&h=fu_mQBjGJZIliOWwCR0Vf2myRvKWyQDsymxEIi8tZ38=',
+        'url': 'assets/images/tomato.jpg',
       },
       {
         'name': 'Onion',
         'price': 0.08,
-        'url':
-            'https://www.miamiherald.com/latest-news/pn2jnn/picture244668322/alternates/FREE_1140/CDC%20onions.jpg',
+        'url': 'assets/images/onions.jpg',
       },
       {
         'name': 'Cucumber',
         'price': 0.1,
-        'url': 'https://cdn.mos.cms.futurecdn.net/EBEXFvqez44hySrWqNs3CZ.jpg',
+        'url': 'assets/images/cucumber.jpg',
       },
       {
         'name': 'Lettuce',
         'price': 0.1,
-        'url': 'https://cdn.britannica.com/77/170677-050-F7333D51/lettuce.jpg',
-      },
-      {
-        'name': 'Onion',
-        'price': 0.3,
-        'url': 'https://pngimg.com/uploads/cabbage/cabbage_PNG8801.png',
-      },
+        'url': 'assets/images/lettuce.jpg',
+      }
     ],
     'Meat': [
       {
         'name': 'Angus',
         'price': 0.5,
-        'url':
-            'https://cdn.shopify.com/s/files/1/0289/2382/2159/products/Certified-Angus-Beef-New-York-Steak_1200x1200.jpg?v=1600300123',
+        'url': 'assets/images/angus.webp',
       },
       {
         'name': 'Beef',
         'price': 0.5,
-        'url':
-            'https://w7.pngwing.com/pngs/892/519/png-transparent-omaha-beefsteak-rib-eye-steak-meat-steak-food-beef-roast-beef.png',
+        'url': 'assets/images/roast-beef.png',
       },
     ],
     'Sauce': [
       {
         'name': 'Mushrooms sauce',
         'price': 0.1,
-        'url':
-            'https://simply-delicious-food.com/wp-content/uploads/2018/12/easy-creamy-mushroom-sauce-1-2.jpg',
+        'url': 'assets/images/mushroom_sauce.jpg',
       },
     ]
   };
