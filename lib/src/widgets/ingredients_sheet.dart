@@ -6,30 +6,33 @@ import 'ingredient_widget.dart';
 class IngredientSheet extends StatelessWidget {
   final _chossenIngredients = [
     {
+      'name': 'Meet',
+      'url': 'assets/images/grilled-burgers.webp',
+      'quantity': 1,
+    },
+    {
       'name': 'Cabbage',
-      'url': 'https://pngimg.com/uploads/cabbage/cabbage_PNG8801.png',
+      'url': 'assets/images/cabbage.png',
       'quantity': 1,
     },
     {
       'name': 'Cheddar',
-      'url':
-          'https://www.pngfind.com/pngs/m/560-5600819_cheddar-png-download-dessert-transparent-png.png',
+      'url': 'assets/images/cheddar.jpeg',
       'quantity': 2,
     },
     {
       'name': 'Beef',
-      'url':
-          'https://w7.pngwing.com/pngs/892/519/png-transparent-omaha-beefsteak-rib-eye-steak-meat-steak-food-beef-roast-beef.png',
+      'url': 'assets/images/roast-beef.png',
       'quantity': 2,
     },
     {
       'name': 'Onion',
-      'url':
-          'https://cdn.imgbin.com/11/6/8/imgbin-red-onion-food-vegetable-onion-red-onion-gXctqvgQxXjQU5gmC2QfwGtNR.jpg',
+      'url': 'assets/images/onions.jpg',
       'quantity': 1,
     },
   ];
 
+  @override
   Widget build(BuildContext context) {
     Size _screenSize = MediaQuery.of(context).size;
     double _height = _screenSize.height;
@@ -40,25 +43,25 @@ class IngredientSheet extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(left: 18.0),
+            padding: const EdgeInsets.only(left: 18.0),
             child: SizedBox(
               width: _width,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     "Ingredients",
                     style: TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   ElevatedButton(
-                    child: Icon(Icons.expand_more),
+                    child: const Icon(Icons.expand_more),
                     onPressed: () => {Navigator.of(context).pop()},
                   ),
-                  Spacer(flex: 2),
+                  const Spacer(flex: 2),
                 ],
               ),
             ),
@@ -66,17 +69,15 @@ class IngredientSheet extends StatelessWidget {
           Container(
             width: _width,
             height: _height * 0.16,
-            padding: EdgeInsets.only(bottom: 18.0),
+            padding: const EdgeInsets.only(bottom: 18.0),
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                ..._chossenIngredients
-                    .map((ingredient) => IngredientWidget(
-                          name: ingredient['name'] as String,
-                          url: ingredient['url'] as String,
-                          quantity: ingredient['quantity'] as int,
-                        ))
-                    .toList(),
+                ..._chossenIngredients.map((ingredient) => IngredientWidget(
+                      name: ingredient['name'] as String,
+                      url: ingredient['url'] as String,
+                      quantity: ingredient['quantity'] as int,
+                    ))
               ],
             ),
           ),
@@ -85,12 +86,12 @@ class IngredientSheet extends StatelessWidget {
             height: _height,
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 18.0),
+            padding: const EdgeInsets.symmetric(horizontal: 18.0),
             width: double.infinity,
             height: _height * 0.06,
             child: MaterialButton(
                 color: Colors.yellow,
-                padding: EdgeInsets.symmetric(horizontal: 18.0),
+                padding: const EdgeInsets.symmetric(horizontal: 18.0),
                 child: const Text(
                   'Add to Cart',
                   style: TextStyle(

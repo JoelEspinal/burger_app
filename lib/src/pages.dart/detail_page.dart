@@ -4,8 +4,7 @@ import 'package:flutter/material.dart';
 import '../widgets/ingredients_bottom_menu.dart';
 
 class DetailPage extends StatelessWidget {
-  final backgroundImg =
-      'https://www.foodandwine.com/thmb/iUUTcrSR2O0jUGzuO5XLS6VQkS8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Grilled-Burgers-with-Pimento-Cheese-FT-RECIPE0723-7bba8a4daaa646b29e3d111b32ae0e40.jpg';
+  final backgroundImg = 'assets/images/background_burger.webp';
 
   late Size size;
 
@@ -38,7 +37,7 @@ class DetailPage extends StatelessWidget {
           SizedBox(
             width: _size.width,
             height: _size.height,
-            child: Image.network(
+            child: Image.asset(
               backgroundImg,
               fit: BoxFit.cover,
             ),
@@ -69,44 +68,32 @@ class DetailPage extends StatelessWidget {
                     CircleAvatar(
                       backgroundColor: Colors.yellowAccent,
                       radius: 36.0,
-                      child:  Text(
+                      child: Text(
                         '325g',
                         style: Theme.of(context)
                             .textTheme
                             .headlineSmall
                             ?.copyWith(
-                            fontWeight: FontWeight.bold, color: Colors.red),
+                                fontWeight: FontWeight.bold, color: Colors.red),
                       ),
                     ),
-
-                    SizedBox(
-                      child: Row(
-                        children: [
-                          Text(
-                            '\$2.',
-                            style: Theme.of(context)
-                                .textTheme
-                                .headlineLarge
-                                ?.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                '15',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headlineSmall
-                                    ?.copyWith(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 65.0, top: 15.0),
+                      child: Badge(
+                        label: Text(
+                          '\$2.15',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineSmall!
+                              .copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black87,
                               ),
-                            ],
-                          )
-                        ],
+                        ),
+                        backgroundColor: Colors.white.withAlpha(200),
+                        child: const Icon(Icons.receipt),
                       ),
-                    )
+                    ),
                   ],
                 )
               ],

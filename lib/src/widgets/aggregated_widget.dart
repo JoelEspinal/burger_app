@@ -30,7 +30,7 @@ class AggregatedWidget extends StatelessWidget {
       {
         'name': 'Lettuce',
         'price': 0.1,
-        'url': 'assets/images/lettuce.jpg',
+        'url': 'assets/images/lettuce.webp',
       }
     ],
     'Meat': [

@@ -45,8 +45,8 @@ class BurgerOffer extends StatelessWidget {
                             .textTheme
                             .headlineMedium!
                             .copyWith(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.yellowAccent,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.yellowAccent,
                           shadows: [
                             Shadow(
                               blurRadius: 10.0,
@@ -63,13 +63,11 @@ class BurgerOffer extends StatelessWidget {
                               MaterialStateProperty.all<Color>(Colors.green)),
                       child: Text(
                         '\$4.15',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineSmall!
-                            .copyWith(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                        ),
+                        style:
+                            Theme.of(context).textTheme.headlineSmall!.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
                       ),
                       onPressed: () {},
                     ),
