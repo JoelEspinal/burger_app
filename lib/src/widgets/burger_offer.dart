@@ -39,7 +39,7 @@ class BurgerOffer extends StatelessWidget {
                   children: [
                     Text(
                       'Cheese Burger',
-                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                         shadows: [
