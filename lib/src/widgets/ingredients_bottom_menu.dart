@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'ingredients_button_widget.dart';
 import 'ingredients_sheet.dart';
 
 class IngredientsheetBottomMenu extends StatefulWidget {
@@ -20,31 +21,19 @@ class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
     return Container(
       width: double.infinity,
       height: _sheetHeight,
-      padding: EdgeInsets.all(18.0),
+      padding: const EdgeInsets.all(18.0),
       child: GestureDetector(
         onVerticalDragEnd: (DragEndDetails details) => _showModalSheet(),
-        child: Flex(
-          direction: Axis.vertical,
+        child: ListView(
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  "Ingredients",
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Spacer(),
-                ElevatedButton(
-                  child: Icon(Icons.expand_less),
+                IngredientsButtonWidget(
                   onPressed: () => _showModalSheet(),
                 ),
-                Spacer(flex: 2),
               ],
             ),
-            Spacer(flex: 2),
             SizedBox(
               width: double.infinity,
               height: 44.0,

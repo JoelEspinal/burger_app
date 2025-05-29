@@ -1,3 +1,4 @@
+import 'package:burger_app_secure/src/widgets/ingredients_button_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'aggregated_widget.dart';
@@ -32,77 +33,40 @@ class IngredientSheet extends StatelessWidget {
     },
   ];
 
+  IngredientSheet({super.key});
+
   @override
   Widget build(BuildContext context) {
-    Size _screenSize = MediaQuery.of(context).size;
-    double _height = _screenSize.height;
-    double _width = _screenSize.width;
-    return SizedBox(
-      width: double.infinity,
-      height: _height * 0.10,
-      child: Column(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(left: 18.0),
-            child: SizedBox(
-              width: _width,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(
-                    "Ingredients",
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const Spacer(),
-                  ElevatedButton(
-                    child: const Icon(Icons.expand_more),
-                    onPressed: () => {Navigator.of(context).pop()},
-                  ),
-                  const Spacer(flex: 2),
-                ],
-              ),
-            ),
-          ),
-          Container(
-            width: _width,
-            height: _height * 0.16,
-            padding: const EdgeInsets.only(bottom: 18.0),
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                ..._chossenIngredients.map((ingredient) => IngredientWidget(
-                      name: ingredient['name'] as String,
-                      url: ingredient['url'] as String,
-                      quantity: ingredient['quantity'] as int,
-                    ))
-              ],
-            ),
-          ),
-          AggregatedWidget(
-            width: _width,
-            height: _height,
-          ),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 18.0),
-            width: double.infinity,
-            height: _height * 0.06,
-            child: MaterialButton(
-                color: Colors.yellow,
-                padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                child: const Text(
-                  'Add to Cart',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                  ),
+    final _height = MediaQuery.of(context).size.height;
+    return ListView(
+      shrinkWrap: true,
+
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+          child: IngredientsButtonWidget(
+              onPressed: () => Navigator.of(context).pop()),
+        ),
+        SizedBox(
+          // width: _width * 0.8,
+          height: 100.0,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              ..._chossenIngredients.map(
+                (ingredient) => IngredientWidget(
+                  name: ingredient['name'] as String,
+                  url: ingredient['url'] as String,
+                  quantity: ingredient['quantity'] as int,
                 ),
-                onPressed: () => {}),
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+        const SizedBox(height: 30.0),
+        AggregatedWidget(),
+      ],
+      // ),
     );
   }
 }
