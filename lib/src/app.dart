@@ -7,7 +7,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'BURGER APP',
+      title: 'TASTYBURGER',
       theme: ThemeData(
         bottomSheetTheme: const BottomSheetThemeData(
           backgroundColor: Colors.white,

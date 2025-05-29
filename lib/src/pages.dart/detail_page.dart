@@ -24,7 +24,7 @@ class DetailPage extends StatelessWidget {
       //     size: 32.0,
       //   ),
       // ),
-      actions: [Icon(Icons.favorite_border_outlined)],
+      actions: const [Icon(Icons.favorite_border_outlined)],
     );
 
     var _appBarHeight = _appBar.preferredSize.height;
@@ -102,6 +102,21 @@ class DetailPage extends StatelessWidget {
         ],
       ),
       bottomSheet: IngredientsheetBottomMenu(),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.yellowAccent,
+        onPressed: () {
+          const snackBar = SnackBar(content: Text('Yay! Tanks for order!'));
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+          Navigator.of(context).pop();
+        },
+        child: const Icon(
+          Icons.shopping_cart_outlined,
+          color: Colors.red,
+          size: 32.0,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      resizeToAvoidBottomInset: false,
     );
   }
 }

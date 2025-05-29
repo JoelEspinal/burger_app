@@ -37,36 +37,58 @@ class IngredientSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _height = MediaQuery.of(context).size.height;
-    return ListView(
-      shrinkWrap: true,
+    final height = MediaQuery.of(context).size.height;
+    return Scaffold(
+      body: ListView(
+        shrinkWrap: true,
 
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-          child: IngredientsButtonWidget(
-              onPressed: () => Navigator.of(context).pop()),
-        ),
-        SizedBox(
-          // width: _width * 0.8,
-          height: 100.0,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              ..._chossenIngredients.map(
-                (ingredient) => IngredientWidget(
-                  name: ingredient['name'] as String,
-                  url: ingredient['url'] as String,
-                  quantity: ingredient['quantity'] as int,
+        children: [
+          Padding(
+            padding:
+                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+            child: IngredientsButtonWidget(
+                onPressed: () => Navigator.of(context).pop()),
+          ),
+          SizedBox(
+            // width: _width * 0.8,
+            height: 100.0,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                ..._chossenIngredients.map(
+                  (ingredient) => IngredientWidget(
+                    name: ingredient['name'] as String,
+                    url: ingredient['url'] as String,
+                    quantity: ingredient['quantity'] as int,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 30.0),
+          AggregatedWidget(),
+        ],
+        // ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        height: height * 0.12,
+        child: Column(
+          children: [
+            MaterialButton(
+              color: Colors.yellow,
+              padding: const EdgeInsets.symmetric(horizontal: 18.0),
+              child: const Text(
+                'Add to Cart',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.black,
                 ),
               ),
-            ],
-          ),
+              onPressed: () => {},
+            ),
+          ],
         ),
-        const SizedBox(height: 30.0),
-        AggregatedWidget(),
-      ],
-      // ),
+      ),
     );
   }
 }

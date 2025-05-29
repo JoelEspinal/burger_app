@@ -10,17 +10,15 @@ class IngredientsheetBottomMenu extends StatefulWidget {
 }
 
 class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
-  GlobalKey<ScaffoldState> _key = GlobalKey();
-
   @override
   Widget build(BuildContext context) {
-    Size _screenSize = MediaQuery.of(context).size;
-    double _height = _screenSize.height;
-    double _sheetHeight = _height * 0.17;
+    Size screenSize = MediaQuery.of(context).size;
+    double height = screenSize.height;
+    double sheetHeight = height * 0.12;
 
     return Container(
       width: double.infinity,
-      height: _sheetHeight,
+      height: sheetHeight,
       padding: const EdgeInsets.all(18.0),
       child: GestureDetector(
         onVerticalDragEnd: (DragEndDetails details) => _showModalSheet(),
@@ -34,21 +32,6 @@ class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
                 ),
               ],
             ),
-            SizedBox(
-              width: double.infinity,
-              height: 44.0,
-              child: MaterialButton(
-                  color: Colors.yellow,
-                  padding: EdgeInsets.symmetric(horizontal: 18.0),
-                  child: const Text(
-                    'Add to Cart',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
-                    ),
-                  ),
-                  onPressed: () => {}),
-            ),
           ],
         ),
       ),
@@ -59,7 +42,7 @@ class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
           top: Radius.circular(10),
         ),
@@ -68,10 +51,9 @@ class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
         return FractionallySizedBox(
           heightFactor: 0.91,
           child: Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius:
-                  new BorderRadius.vertical(top: Radius.circular(10.0)),
+            decoration: const BoxDecoration(
+              color: Colors.red,
+              borderRadius: BorderRadius.vertical(top: Radius.circular(10.0)),
             ),
             child: IngredientSheet(),
           ),

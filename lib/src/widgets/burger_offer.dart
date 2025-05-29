@@ -19,7 +19,7 @@ class BurgerOffer extends StatelessWidget {
         children: [
           SizedBox(
             height: height,
-            width: width / 3,
+            width: width / 2.5,
             child: ClipRRect(
               borderRadius: const BorderRadius.all(
                 Radius.circular(10),
@@ -37,30 +37,22 @@ class BurgerOffer extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(12.0, 12.0, 0, 0),
                 child: Column(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 12.0),
-                      child: Text(
-                        'Cheese Burger',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium!
-                            .copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.yellowAccent,
-                          shadows: [
-                            Shadow(
-                              blurRadius: 10.0,
-                              color: Colors.black,
-                              offset: Offset(5.0, 5.0),
-                            ),
-                          ],
-                        ),
+                    Text(
+                      'Cheese Burger',
+                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        shadows: [
+                          const Shadow(
+                            blurRadius: 10.0,
+                            color: Colors.black,
+                            offset: Offset(5.0, 5.0),
+                          ),
+                        ],
                       ),
                     ),
-                    ElevatedButton(
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all<Color>(Colors.green)),
+                    MaterialButton(
+                      color: Colors.green,
                       child: Text(
                         '\$4.15',
                         style:
