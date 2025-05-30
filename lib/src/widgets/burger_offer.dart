@@ -1,3 +1,4 @@
+import 'package:burger_app_secure/src/widgets/price_widget.dart';
 import 'package:flutter/material.dart';
 
 class BurgerOffer extends StatelessWidget {
@@ -50,18 +51,7 @@ class BurgerOffer extends StatelessWidget {
                         ],
                       ),
                     ),
-                    MaterialButton(
-                      color: Colors.green,
-                      child: Text(
-                        '\$4.15',
-                        style:
-                            Theme.of(context).textTheme.headlineSmall!.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                ),
-                      ),
-                      onPressed: () {},
-                    ),
+                    const PriceWidget(),
                   ],
                 ),
               ),

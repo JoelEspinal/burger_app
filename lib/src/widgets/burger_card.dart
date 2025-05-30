@@ -47,25 +47,28 @@ class BurgerCard extends StatelessWidget {
                 ],
               )),
               Flexible(
-                child: ListTile(
-                  contentPadding: const EdgeInsets.all(8.0),
-                  title: Text(
-                    'King Size Burger',
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyLarge!
-                        .copyWith(fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 12.0),
-                    child: ListView(
-                      shrinkWrap: true,
-                      children: [
-                        Text(
-                          'egg, mustard, onion, egg, mustard, onion, egg, mustard, onion, egg, mustard, onion, egg, mustard, onion, mustard, onion, egg, mustard, onion, egg, mustard, onion, mustard, onion, egg, mustard, onion, egg, mustard, onion, mustard, onion, egg, mustard, onion, egg, mustard, onion',
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                      ],
+                child: Padding(
+                  padding:
+                      const EdgeInsets.only(top: 10.0, left: 20, right: 20.0),
+                  child: ListTile(
+                    title: Text(
+                      'King Size Burger',
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineSmall!
+                          .copyWith(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Padding(
+                      padding: const EdgeInsets.only(top: 10.0, bottom: 15.0),
+                      child: ListView(
+                        shrinkWrap: true,
+                        children: [
+                          Text(
+                            'egg, mustard, onion, egg, mustard, onion, egg, mustard, onion, egg, mustard, onion, egg, mustard, onion, mustard, onion, egg, mustard, onion, egg, mustard, onion, mustard, onion, egg, mustard, onion, egg, mustard, onion, mustard, onion, egg, mustard, onion, egg, mustard, onion',
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
