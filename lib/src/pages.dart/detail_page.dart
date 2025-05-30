@@ -12,26 +12,30 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var _size = MediaQuery.of(context).size;
 
-    final _appBar = AppBar(
-      backgroundColor: Colors.yellowAccent,
-      // leading: ElevatedButton(
-      //   onPressed: () {
-      //     Navigator.of(context).pop();
-      //   },
-      //   child: Icon(
-      //     Icons.chevron_left,
-      //     color: Colors.red,
-      //     size: 32.0,
-      //   ),
-      // ),
-      actions: const [Icon(Icons.favorite_border_outlined)],
-    );
-
-    var _appBarHeight = _appBar.preferredSize.height;
-
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: _appBar,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: MaterialButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: const Icon(
+            Icons.chevron_left_outlined,
+            color: Colors.white,
+            size: 45.0,
+          ),
+        ),
+        actions: const [
+          SizedBox(
+            width: 20.0,
+          ),
+          Icon(Icons.favorite_border_outlined, color: Colors.white, size: 30.0),
+          SizedBox(
+            width: 20.0,
+          ),
+        ],
+      ),
       body: Stack(
         children: [
           SizedBox(
@@ -42,61 +46,69 @@ class DetailPage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          Container(
-            padding: EdgeInsets.only(
-                top: _appBarHeight * 2, left: 24.0, right: 24.0),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Positioned(
+            top: 120.0,
+            left: 30.0,
+            child: Text(
+              'Cheese\nBurger',
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineLarge
+                  ?.copyWith(fontWeight: FontWeight.bold, color: Colors.white),
+            ),
+          ),
+          Positioned(
+            top: 120.0,
+            right: 30.0,
+            child: Column(
               children: [
-                Column(
-                  children: [
-                    Text(
-                      'Cheese\nBurget',
-                      style: Theme.of(context)
-                          .textTheme
-                          .headlineMedium
-                          ?.copyWith(
-                              fontWeight: FontWeight.bold, color: Colors.white),
-                    ),
-                  ],
+                Text(
+                  '325g',
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    shadows: [
+                      const Shadow(
+                        blurRadius: 10.0,
+                        color: Colors.black,
+                      ),
+                    ],
+                  ),
                 ),
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    CircleAvatar(
-                      backgroundColor: Colors.yellowAccent,
-                      radius: 36.0,
-                      child: Text(
-                        '325g',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineSmall
-                            ?.copyWith(
-                                fontWeight: FontWeight.bold, color: Colors.red),
+                const SizedBox(
+                  height: 10.0,
+                ),
+                Text(
+                  '\$2.',
+                  style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.yellow,
+                    shadows: [
+                      const Shadow(
+                        blurRadius: 10.0,
+                        color: Colors.black,
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 65.0, top: 15.0),
-                      child: Badge(
-                        label: Text(
-                          '\$2.15',
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineSmall!
-                              .copyWith(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black87,
-                              ),
-                        ),
-                        backgroundColor: Colors.white.withAlpha(200),
-                        child: const Icon(Icons.receipt),
-                      ),
-                    ),
-                  ],
-                )
+                    ],
+                  ),
+                ),
               ],
+            ),
+          ),
+          Positioned(
+            top: 160.0,
+            right: 15.0,
+            child: Text(
+              '15',
+              style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                fontWeight: FontWeight.bold,
+                color: Colors.yellow,
+                shadows: [
+                  const Shadow(
+                    blurRadius: 10.0,
+                    color: Colors.black,
+                  ),
+                ],
+              ),
             ),
           )
         ],
@@ -111,7 +123,7 @@ class DetailPage extends StatelessWidget {
         },
         child: const Icon(
           Icons.shopping_cart_outlined,
-          color: Colors.red,
+          color: Colors.black,
           size: 32.0,
         ),
       ),

@@ -14,7 +14,7 @@ class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     double height = screenSize.height;
-    double sheetHeight = height * 0.12;
+    double sheetHeight = height * 0.15;
 
     return Container(
       width: double.infinity,
@@ -42,19 +42,17 @@ class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(
-          top: Radius.circular(10),
-        ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20.0),
       ),
       builder: (BuildContext context) {
         return FractionallySizedBox(
           heightFactor: 0.91,
           child: Container(
-            decoration: const BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.vertical(top: Radius.circular(10.0)),
-            ),
+            // decoration: const BoxDecoration(
+            //   color: Colors.red,
+            //   borderRadius: BorderRadius.vertical(top: Radius.circular(10.0)),
+            // ),
             child: IngredientSheet(),
           ),
         );
