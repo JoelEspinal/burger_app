@@ -55,7 +55,7 @@ class IngredientWidget extends StatelessWidget {
             padding: const EdgeInsets.only(),
             child: Align(
               alignment: Alignment.bottomCenter,
-              child: Text('$name'),
+              child: Text(name),
             ),
           )),
         ],

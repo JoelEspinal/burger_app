@@ -8,6 +8,8 @@ class DetailPage extends StatelessWidget {
 
   late Size size;
 
+  DetailPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     var _size = MediaQuery.of(context).size;

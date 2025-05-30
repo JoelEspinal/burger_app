@@ -48,13 +48,7 @@ class _IngredientsheetBottomMenuState extends State<IngredientsheetBottomMenu> {
       builder: (BuildContext context) {
         return FractionallySizedBox(
           heightFactor: 0.91,
-          child: Container(
-            // decoration: const BoxDecoration(
-            //   color: Colors.red,
-            //   borderRadius: BorderRadius.vertical(top: Radius.circular(10.0)),
-            // ),
-            child: IngredientSheet(),
-          ),
+          child: IngredientSheet(),
         );
       },
     );

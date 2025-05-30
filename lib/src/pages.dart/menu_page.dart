@@ -13,6 +13,8 @@ class MenuPage extends StatelessWidget {
   ];
 
   late Size _size;
+
+  MenuPage({super.key});
   @override
   Widget build(BuildContext context) {
     _size = MediaQuery.of(context).size;

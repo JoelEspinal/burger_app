@@ -1,11 +1,7 @@
 import 'dart:collection';
-import 'dart:math';
-
-import 'package:burger_app_secure/src/widgets/ingredient_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'package:burger_app_secure/src/models/ingredient.dart';
-
 import 'ingredient_item_widget.dart';
 
 class AggregatedWidget extends StatelessWidget {

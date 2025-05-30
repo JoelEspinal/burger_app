@@ -1,4 +1,3 @@
-import 'package:burger_app_secure/src/widgets/ingredients_button_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'aggregated_widget.dart';
