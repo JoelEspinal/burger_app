@@ -1,0 +1,2 @@
+/Users/joelespinal/dev/flutter/burger_app/android/app/.cxx/RelWithDebInfo/1a5x152q/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/joelespinal/dev/flutter/burger_app/android/app/.cxx/RelWithDebInfo/1a5x152q/arm64-v8a/CMakeFiles/rebuild_cache.dir

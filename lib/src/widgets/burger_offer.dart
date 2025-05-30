@@ -1,3 +1,4 @@
+import 'package:burger_app_secure/src/widgets/price_widget.dart';
 import 'package:flutter/material.dart';
 
 class BurgerOffer extends StatelessWidget {
@@ -19,12 +20,12 @@ class BurgerOffer extends StatelessWidget {
         children: [
           SizedBox(
             height: height,
-            width: width / 3,
+            width: width / 2.5,
             child: ClipRRect(
               borderRadius: const BorderRadius.all(
                 Radius.circular(10),
               ),
-              child: Image.network(
+              child: Image.asset(
                 url,
                 fit: BoxFit.cover,
               ),
@@ -37,33 +38,20 @@ class BurgerOffer extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(12.0, 12.0, 0, 0),
                 child: Column(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 12.0),
-                      child: Text(
-                        'Cheese Burger',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium!
-                            .copyWith(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
+                    Text(
+                      'Cheese Burger',
+                      style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        shadows: [
+                          const Shadow(
+                            blurRadius: 15.0,
+                            color: Colors.black,
+                          ),
+                        ],
                       ),
                     ),
-                    ElevatedButton(
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all<Color>(Colors.green)),
-                      child: Text(
-                        '\$4.15',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineSmall!
-                            .copyWith(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                      ),
-                      onPressed: () {},
-                    ),
+                    const PriceWidget(),
                   ],
                 ),
               ),

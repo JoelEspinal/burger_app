@@ -5,7 +5,8 @@ class IngredientItemWidget extends StatelessWidget {
   final price;
   final url;
 
-  IngredientItemWidget({
+  const IngredientItemWidget({
+    super.key,
     this.name,
     this.price,
     this.url,
@@ -16,7 +17,7 @@ class IngredientItemWidget extends StatelessWidget {
     return IntrinsicHeight(
       child: Container(
         width: double.infinity,
-        padding: EdgeInsets.only(top: 16.0, left: 18.0),
+        padding: const EdgeInsets.only(top: 16.0, left: 18.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
@@ -25,14 +26,14 @@ class IngredientItemWidget extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.only(right: 18.0),
+                  padding: const EdgeInsets.only(right: 18.0),
                   child: CircleAvatar(
                     radius: 36.0,
                     backgroundColor: Colors.grey,
                     child: CircleAvatar(
                       backgroundColor: Colors.white,
                       radius: 34.0,
-                      child: Image.network(
+                      child: Image.asset(
                         url,
                         width: 44.0,
                         height: 44.0,
@@ -42,13 +43,13 @@ class IngredientItemWidget extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 16.0),
+                  padding: const EdgeInsets.only(top: 16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
                         "$name",
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
@@ -62,18 +63,18 @@ class IngredientItemWidget extends StatelessWidget {
                 )
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Padding(
-              padding: EdgeInsets.only(right: 18.0),
+              padding: const EdgeInsets.only(right: 18.0),
               child: Row(
                 children: <Widget>[
                   MaterialButton(
                     minWidth: 4.0,
-                    child: Text("-"),
                     color: Colors.white70,
                     onPressed: () {},
+                    child: const Text("-"),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 5.0),
                     child: Text(
                       "1",
@@ -81,9 +82,9 @@ class IngredientItemWidget extends StatelessWidget {
                   ),
                   MaterialButton(
                     minWidth: 4.0,
-                    child: Text("+"),
                     color: Colors.white70,
                     onPressed: () {},
+                    child: const Text("+"),
                   ),
                 ],
               ),

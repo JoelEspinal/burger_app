@@ -5,12 +5,16 @@ class IngredientWidget extends StatelessWidget {
   final String url;
   final int quantity;
 
-  IngredientWidget({required this.name, required this.url, required this.quantity});
+  const IngredientWidget(
+      {super.key,
+      required this.name,
+      required this.url,
+      required this.quantity});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 18.0),
+      padding: const EdgeInsets.symmetric(horizontal: 18.0),
       child: Stack(
         children: [
           CircleAvatar(
@@ -19,7 +23,7 @@ class IngredientWidget extends StatelessWidget {
             child: CircleAvatar(
               backgroundColor: Colors.white,
               radius: 34.0,
-              child: Image.network(
+              child: Image.asset(
                 url,
                 width: 44.0,
                 height: 44.0,
@@ -48,10 +52,10 @@ class IngredientWidget extends StatelessWidget {
           ),
           Positioned.fill(
               child: Padding(
-            padding: EdgeInsets.only(bottom: 18.0),
+            padding: const EdgeInsets.only(),
             child: Align(
               alignment: Alignment.bottomCenter,
-              child: Text('$name'),
+              child: Text(name),
             ),
           )),
         ],

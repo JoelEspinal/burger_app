@@ -6,91 +6,54 @@ import 'ingredient_widget.dart';
 class IngredientSheet extends StatelessWidget {
   final _chossenIngredients = [
     {
+      'name': 'Meet',
+      'url': 'assets/images/grilled-burgers.webp',
+      'quantity': 1,
+    },
+    {
       'name': 'Cabbage',
-      'url': 'https://pngimg.com/uploads/cabbage/cabbage_PNG8801.png',
+      'url': 'assets/images/cabbage.png',
       'quantity': 1,
     },
     {
       'name': 'Cheddar',
-      'url':
-          'https://www.pngfind.com/pngs/m/560-5600819_cheddar-png-download-dessert-transparent-png.png',
+      'url': 'assets/images/cheddar.jpeg',
       'quantity': 2,
     },
     {
       'name': 'Beef',
-      'url':
-          'https://w7.pngwing.com/pngs/892/519/png-transparent-omaha-beefsteak-rib-eye-steak-meat-steak-food-beef-roast-beef.png',
+      'url': 'assets/images/roast-beef.png',
       'quantity': 2,
     },
     {
       'name': 'Onion',
-      'url':
-          'https://cdn.imgbin.com/11/6/8/imgbin-red-onion-food-vegetable-onion-red-onion-gXctqvgQxXjQU5gmC2QfwGtNR.jpg',
+      'url': 'assets/images/onions.jpg',
       'quantity': 1,
     },
   ];
 
+  IngredientSheet({super.key});
+
+  @override
   Widget build(BuildContext context) {
-    Size _screenSize = MediaQuery.of(context).size;
-    double _height = _screenSize.height;
-    double _width = _screenSize.width;
-    return SizedBox(
-      width: double.infinity,
-      height: _height * 0.10,
-      child: Column(
-        children: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(left: 18.0),
-            child: SizedBox(
-              width: _width,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Ingredients",
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Spacer(),
-                  ElevatedButton(
-                    child: Icon(Icons.expand_more),
-                    onPressed: () => {Navigator.of(context).pop()},
-                  ),
-                  Spacer(flex: 2),
-                ],
-              ),
-            ),
-          ),
-          Container(
-            width: _width,
-            height: _height * 0.16,
-            padding: EdgeInsets.only(bottom: 18.0),
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                ..._chossenIngredients
-                    .map((ingredient) => IngredientWidget(
-                          name: ingredient['name'] as String,
-                          url: ingredient['url'] as String,
-                          quantity: ingredient['quantity'] as int,
-                        ))
-                    .toList(),
-              ],
-            ),
-          ),
-          AggregatedWidget(
-            width: _width,
-            height: _height,
-          ),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 18.0),
-            width: double.infinity,
-            height: _height * 0.06,
-            child: MaterialButton(
+    final height = MediaQuery.of(context).size.height;
+    return Card(
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(10.0)),
+      ),
+      child: Scaffold(
+        bottomNavigationBar: BottomAppBar(
+          height: height * 0.12,
+          child: Column(
+            children: [
+              MaterialButton(
+                minWidth: double.infinity,
+                height: 60.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
                 color: Colors.yellow,
-                padding: EdgeInsets.symmetric(horizontal: 18.0),
+                padding: const EdgeInsets.symmetric(horizontal: 18.0),
                 child: const Text(
                   'Add to Cart',
                   style: TextStyle(
@@ -98,9 +61,64 @@ class IngredientSheet extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
-                onPressed: () => {}),
+                onPressed: () => {
+                  Navigator.of(context).pop(),
+                },
+              ),
+            ],
           ),
-        ],
+        ),
+        body: ListView(
+          shrinkWrap: true,
+          children: [
+            const SizedBox(
+              height: 20.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  'Ingredients',
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  icon: const Icon(Icons.expand_more_rounded,
+                      color: Colors.black, size: 40.0),
+                ),
+                Container(),
+                Container(),
+              ],
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
+            SizedBox(
+              // width: _width * 0.8,
+              height: 100.0,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  ..._chossenIngredients.map(
+                    (ingredient) => IngredientWidget(
+                      name: ingredient['name'] as String,
+                      url: ingredient['url'] as String,
+                      quantity: ingredient['quantity'] as int,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 30.0),
+            AggregatedWidget(),
+          ],
+          // ),
+        ),
       ),
     );
   }

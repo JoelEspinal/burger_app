@@ -4,16 +4,18 @@ import 'pages.dart/detail_page.dart';
 import 'pages.dart/menu_page.dart';
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'BURGER APP',
+      title: 'TASTYBURGER',
       theme: ThemeData(
         bottomSheetTheme: const BottomSheetThemeData(
           backgroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(
-              top: Radius.circular(10),
+              top: Radius.circular(20.0),
             ),
           ),
         ),
