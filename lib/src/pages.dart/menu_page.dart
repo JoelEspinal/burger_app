@@ -37,83 +37,85 @@ class MenuPage extends StatelessWidget {
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 50.0,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.all(8.0),
-                children: [
-                  ...flavors.map(
-                    (flavor) => Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                      child: ElevatedButton(
-                          style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(
-                                  Colors.yellow[600]!)),
-                          child: Text(
-                            flavor,
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyLarge!
-                                .copyWith(
-                                    fontWeight: FontWeight.normal,
-                                    color: Colors.black),
-                          ),
-                          onPressed: () {}),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: BurgerCard(
-                width: _size.width,
-                height: _size.height,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Text(
-                'SPECIAL OFFERS',
-                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-              ),
-            ),
-            SizedBox(
-              width: _size.width,
-              height: _size.height / 4,
-              child: ListView(
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                children: [
-                  ...offers.map(
-                    (offerUrl) => Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                      child: BurgerOffer(
-                        width: _size.width,
-                        height: _size.height,
-                        url: offerUrl,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
+      body: ListView(
+        shrinkWrap: true,
+        children: [
+          SizedBox(
+            height: 50.0,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.all(8.0),
-              child: BurgerCard(
-                width: _size.width,
-                height: _size.height,
-              ),
+              children: [
+                ...flavors.map(
+                  (flavor) => Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                    child: MaterialButton(
+                        color: Colors.yellow[600],
+                        child: Text(
+                          flavor,
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge!
+                              .copyWith(
+                                  fontWeight: FontWeight.normal,
+                                  color: Colors.black),
+                        ),
+                        onPressed: () {}),
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: BurgerCard(
+              width: _size.width,
+              height: _size.height,
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Text(
+                  'SPECIAL OFFERS',
+                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            width: _size.width,
+            height: _size.height / 4,
+            child: ListView(
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+              children: [
+                ...offers.map(
+                  (offerUrl) => Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                    child: BurgerOffer(
+                      width: _size.width,
+                      height: _size.height,
+                      url: offerUrl,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: BurgerCard(
+              width: _size.width,
+              height: _size.height,
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: BottomAppBar(
         child: Row(

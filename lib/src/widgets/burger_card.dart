@@ -9,41 +9,93 @@ class BurgerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      width: width ?? 100 * 0.5,
+      height: 200.0,
       child: InkWell(
-        splashColor: Colors.yellow.withOpacity(0.9),
-        onTap: () {
-          debugPrint('Card tapped.');
-        },
+        splashColor: Colors.grey,
+        radius: 0.5,
+        onTap: () {},
         child: Card(
-          color: Colors.yellow.withOpacity(0.7),
           clipBehavior: Clip.hardEdge,
           shape: RoundedRectangleBorder(
-            side: BorderSide(color: Colors.yellow.withOpacity(0.7), width: 1),
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(10),
           ),
           child: Row(
             children: [
-              Column(
-                children: [
-                  SizedBox(
-                    width: width! / 3.7,
-                    height: 110,
-                    child: Image.asset(
-                      'assets/images/tasty_burger.jpg',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ],
+              Flexible(
+                child: Image.asset('assets/images/beef_burger.webp'),
               ),
               Flexible(
-                child: Text("Taste our spetial grilled burgers",
+                child: ListTile(
+                  contentPadding: const EdgeInsets.all(8.0),
+                  title: Text(
+                    'King Size Burger',
                     style: Theme.of(context)
                         .textTheme
-                        .bodyLarge
-                        ?.copyWith(fontWeight: FontWeight.bold)),
-              )
+                        .bodyLarge!
+                        .copyWith(fontWeight: FontWeight.bold),
+                  ),
+                  subtitle: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 12.0),
+                    child: ListView(
+                      shrinkWrap: true,
+                      children: [
+                        Text(
+                          'egg, mustard, onion, egg, mustard, onion, egg, mustard, onion, egg, mustard, onion, egg, mustard, onion, mustard, onion, egg, mustard, onion, egg, mustard, onion, mustard, onion, egg, mustard, onion, egg, mustard, onion, mustard, onion, egg, mustard, onion, egg, mustard, onion',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
+          // child: Row(
+          // children: [
+          //   Column(
+          //     children: [
+          //       SizedBox(
+          //         width: width! * 0.5,
+          //         height: 190.0,
+          //         child: Image.asset(
+          //           'assets/images/tasty_burger.jpg',
+          //           fit: BoxFit.cover,
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          //   Padding(
+          //     padding: const EdgeInsets.all(8.0),
+          //     child:
+
+          // Column(
+          //   children: [
+          //     ListView(
+          //       scrollDirection: Axis.vertical,
+          //       shrinkWrap: true,
+          //       children: [
+          //         Text(
+          //           'King Size Burger',
+          //           style: Theme.of(context)
+          //               .textTheme
+          //               .bodyLarge!
+          //               .copyWith(fontWeight: FontWeight.bold),
+          //         ),
+          //         Padding(
+          //           padding: const EdgeInsets.symmetric(vertical: 12.0),
+          //           child: Text(
+          //             'egg, mustad, onion, egg, mustad, onion, egg, mustad, onion, egg, mustad, onion, egg, mustad, onion, egg, mustad, onion, egg, mustad, onion, egg, mustad, onion',
+          //             style: Theme.of(context).textTheme.bodyMedium,
+          //           ),
+          //         ),
+          //       ],
+          //     ),
+          //   ],
+          // ),
+
+          // ),
+          // ],
         ),
       ),
     );
