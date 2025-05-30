@@ -1,3 +1,4 @@
+import 'package:burger_app_secure/src/widgets/price_widget.dart';
 import 'package:flutter/material.dart';
 
 class BurgerCard extends StatelessWidget {
@@ -23,8 +24,28 @@ class BurgerCard extends StatelessWidget {
           child: Row(
             children: [
               Flexible(
-                child: Image.asset('assets/images/beef_burger.webp'),
-              ),
+                  child: Stack(
+                children: [
+                  Image.asset('assets/images/beef_burger.webp'),
+                  Positioned(child: PriceWidget(), top: 12.0, left: 12.0),
+                  Positioned(
+                      bottom: 12.0,
+                      left: 12.0,
+                      child: Text(
+                        '525g',
+                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          shadows: [
+                            const Shadow(
+                              blurRadius: 10.0,
+                              color: Colors.black,
+                            ),
+                          ],
+                        ),
+                      )),
+                ],
+              )),
               Flexible(
                 child: ListTile(
                   contentPadding: const EdgeInsets.all(8.0),

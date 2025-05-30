@@ -44,9 +44,8 @@ class BurgerOffer extends StatelessWidget {
                         color: Colors.white,
                         shadows: [
                           const Shadow(
-                            blurRadius: 10.0,
+                            blurRadius: 15.0,
                             color: Colors.black,
-                            offset: Offset(5.0, 5.0),
                           ),
                         ],
                       ),
