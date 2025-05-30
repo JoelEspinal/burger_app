@@ -120,18 +120,26 @@ class MenuPage extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomAppBar(
+        color: Colors.black,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             IconButton(
-                icon: const Icon(Icons.restaurant_menu), onPressed: () {}),
+                color: Colors.white,
+                icon: const Icon(Icons.restaurant_menu),
+                onPressed: () {}),
             IconButton(
-                icon: const Icon(Icons.favorite_outline), onPressed: () {}),
+                color: Colors.white,
+                icon: const Icon(Icons.favorite_outline),
+                onPressed: () {}),
             IconButton(
+                color: Colors.white,
                 icon: const Icon(Icons.shopping_cart_outlined),
                 onPressed: () {}),
             IconButton(
-                icon: const Icon(Icons.person_outline), onPressed: () {}),
+                color: Colors.white,
+                icon: const Icon(Icons.person_outline),
+                onPressed: () {}),
           ],
         ),
       ),
