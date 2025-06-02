@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "383869611958",
+    "project_id": "tasty-burger-app-b397a",
+    "storage_bucket": "tasty-burger-app-b397a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383869611958:android:3f355050844ae47209db17",
+        "android_client_info": {
+          "package_name": "com.example.burger_app_secure"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaG4d2-6HY-KLnmFOMMVWSZbh8Ug2L_vM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
