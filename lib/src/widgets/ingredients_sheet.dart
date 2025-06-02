@@ -7,27 +7,27 @@ class IngredientSheet extends StatelessWidget {
   final _chossenIngredients = [
     {
       'name': 'Meet',
-      'url': 'assets/images/grilled-burgers.webp',
+      'url': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsmp0GNFVONIAE37LKJzm84FQHC4U6HNMwEw&s',
       'quantity': 1,
     },
     {
       'name': 'Cabbage',
-      'url': 'assets/images/cabbage.png',
+      'url': 'https://pngimg.com/uploads/cabbage/cabbage_PNG8801.png',
       'quantity': 1,
     },
     {
       'name': 'Cheddar',
-      'url': 'assets/images/cheddar.jpeg',
+      'url': 'https://img.freepik.com/free-psd/swiss-cheese-wedge-delicious-dairy-product_84443-38876.jpg?semt=ais_hybrid&w=740',
       'quantity': 2,
     },
     {
       'name': 'Beef',
-      'url': 'assets/images/roast-beef.png',
+      'url': 'https://w7.pngwing.com/pngs/892/519/png-transparent-omaha-beefsteak-rib-eye-steak-meat-steak-food-beef-roast-beef.png',
       'quantity': 2,
     },
     {
       'name': 'Onion',
-      'url': 'assets/images/onions.jpg',
+      'url': 'https://e7.pngegg.com/pngimages/788/438/png-clipart-onion-onion-vegetables-thumbnail.png',
       'quantity': 1,
     },
   ];
